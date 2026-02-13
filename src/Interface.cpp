@@ -63,6 +63,13 @@ void Interface::run ()
             }
             break;
         }
+
+        case 4:
+        {
+            std::cout << "Digite uma opção válida.\n";
+            break;
+        }
+
         default:
             executando = false;
             break;
