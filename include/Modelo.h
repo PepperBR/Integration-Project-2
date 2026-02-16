@@ -2,7 +2,6 @@
 #define MODELO_H
 
 #include <string>
-#include <array>
 
 class Modelo
 {
@@ -11,9 +10,8 @@ class Modelo
         
     public:
         Modelo (const std::string& nome_modelo);
-
-    const std::string & getNome() const;
-
+        const std::string getNome() const;
+        
 };
 
 #endif

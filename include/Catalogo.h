@@ -10,8 +10,8 @@ class Catalogo
         std::vector<Linha> linhas;
     
     public:
-        std::vector<Modelo> buscar_modelos_linha(const std::string & nome);
-        std::vector<Linha> & get_linhas();
+        const std::vector<Modelo> & buscar_modelos_linha(const std::string & nome) const;
+        const std::vector<Linha> & get_linhas() const;
         Catalogo();
 };
 

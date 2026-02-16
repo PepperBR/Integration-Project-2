@@ -12,8 +12,8 @@ class Linha
 
     public:
         Linha(const std::string & nome_linha, std::vector<Modelo> modelos_linha);
-        std::string & get_nome ();
-        std::vector<Modelo> & get_modelos();
+        const std::string & get_nome () const;
+        const std::vector<Modelo> & get_modelos() const;
 };
 
 #endif

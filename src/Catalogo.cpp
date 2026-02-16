@@ -48,9 +48,9 @@ Catalogo::Catalogo()
 
 }
 
-std::vector<Modelo> Catalogo::buscar_modelos_linha(const std::string & nome)
+const std::vector<Modelo> & Catalogo::buscar_modelos_linha(const std::string & nome) const
 {
-    for (auto modelo : linhas)
+    for (const auto & modelo : linhas)
     {
         if(modelo.get_nome() == nome)
         {
@@ -60,7 +60,7 @@ std::vector<Modelo> Catalogo::buscar_modelos_linha(const std::string & nome)
     return {};
 }
 
-std::vector<Linha> & Catalogo::get_linhas()
+const std::vector<Linha> & Catalogo::get_linhas() const
 {
     return linhas;
 }

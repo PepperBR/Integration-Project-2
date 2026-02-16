@@ -8,12 +8,12 @@ Linha::Linha(const std::string & nome_linha, std::vector<Modelo> modelos_linha)
 
 }   
 
-std::string & Linha::get_nome ()
+const std::string & Linha::get_nome () const
 {
     return nome;
 }
 
-std::vector<Modelo> & Linha::get_modelos()
+const std::vector<Modelo> & Linha::get_modelos() const
 {
     return modelos;
 }
