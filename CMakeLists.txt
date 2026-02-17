@@ -6,6 +6,8 @@ add_library(${PROJECT_NAME}_lib)
 
 target_include_directories(${PROJECT_NAME}_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
+target_compile_features(${PROJECT_NAME}_lib PRIVATE cxx_std_17)
+
 target_sources(${PROJECT_NAME}_lib 
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Modelo.cpp

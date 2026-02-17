@@ -2,52 +2,20 @@
 #include <string.h>
 #include <vector>
 
-Catalogo::Catalogo()
-    : linhas()
+const std::vector<Linha> Catalogo::linhas
 {
-    // Linha Zeus
-    std::vector<Modelo> modelo_zeus;
-    modelo_zeus.emplace_back("Zeus 8021");
-    modelo_zeus.emplace_back("Zeus 8023");
-    modelo_zeus.emplace_back("Zeus 8031");
-    
-    std::string nome_zeus = "Zeus";
-    linhas.push_back(Linha(nome_zeus, modelo_zeus));
+    // LINHA                            MODELOS
+    {"Zeus",         { {"Zeus 8021"}, {"Zeus 8023"}, {"Zeus 8031"} }},
+    {"Apolo",        { {"Apolo 6031"} }},
+    {"Cronos",       { {"Cronos 6001-A"}, {"Cronos 6021-A"}, {"Cronos 6021L"}, {"Cronos 6003"}, {"Cronos 7023"}, {"Cronos 7023L"}, {"Cronos 7023 2,5"} }},
+    {"Apolo",        { {{"Ares 7021"}, {"Ares 7031"}, {"Ares 7023"}, {"Ares 8023"}, {"Ares 8023 15"}, {"Ares 8023 200"}} }}
+};
 
-    // Linha Apolo
-    std::vector<Modelo> modelo_apolo;
-    modelo_apolo.emplace_back("Apolo 6031");
-    
-    std::string nome_apolo = "Apolo";
-    linhas.push_back(Linha(nome_apolo, modelo_apolo));
-
-    // Linha Cronos
-    std::vector<Modelo> modelo_cronos;
-    modelo_cronos.emplace_back("Cronos 6001-A");
-    modelo_cronos.emplace_back("Cronos 6021-A");
-    modelo_cronos.emplace_back("Cronos 6021L");
-    modelo_cronos.emplace_back("Cronos 6003");
-    modelo_cronos.emplace_back("Cronos 7023");
-    modelo_cronos.emplace_back("Cronos 7023L");
-    modelo_cronos.emplace_back("Cronos 7023 2,5");
-    
-    std::string nome_cronos = "Cronos";
-    linhas.push_back(Linha(nome_cronos, modelo_cronos));
-
-    // Linha Ares
-    std::vector<Modelo> modelo_ares;
-    modelo_ares.emplace_back("Ares 7021");
-    modelo_ares.emplace_back("Ares 7031");
-    modelo_ares.emplace_back("Ares 7023");
-    modelo_ares.emplace_back("Ares 8023");
-    modelo_ares.emplace_back("Ares 8023 15");
-    modelo_ares.emplace_back("Ares 8023 200");
-    
-    std::string nome_ares = "Ares";
-    linhas.push_back(Linha(nome_ares, modelo_ares));
-
+Catalogo::Catalogo()
+{
 }
 
+// Pesquisar std::find_if std::find
 const std::vector<Modelo> & Catalogo::buscar_modelos_linha(const std::string & nome) const
 {
     for (const auto & modelo : linhas)

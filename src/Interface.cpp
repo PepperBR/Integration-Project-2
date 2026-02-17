@@ -1,6 +1,7 @@
 #include "Interface.h"
 #include <string>
 #include <iostream>
+#include <functional>
 
 Interface::Interface()
     : catalogo()

@@ -3,11 +3,12 @@
 
 #include "Linha.h"
 #include <vector>
+#include <array>
 
 class Catalogo
 {
     private:
-        std::vector<Linha> linhas;
+        static const std::vector<Linha> linhas;
     
     public:
         const std::vector<Modelo> & buscar_modelos_linha(const std::string & nome) const;
